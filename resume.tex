@@ -1,0 +1,155 @@
+\documentclass[%singlesided,
+               doublesided,
+               paper=a4,
+               fontsize=10pt
+              ]{my-resume}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% set geometry
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength\highlightwidth{8cm}
+\setlength\headerheight{3cm}            % note that margintop gets added to this value, i.e. the header bar is 5cm
+\setlength\marginleft{1cm}
+\setlength\marginright{\marginleft}      % needs to be 1.5 times to be actually equal. why?
+\setlength\margintop{1cm}
+\setlength\marginbottom{1cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FONTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{fontspec}
+\setmainfont{Carlito}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COLORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\colorlet{highlightbarcolor}{lightgray}
+\colorlet{headerbarcolor}{darkgray}
+
+\colorlet{headerfontcolor}{white}
+\colorlet{accent}{awesome-red}
+\colorlet{heading}{black}
+\colorlet{emphasis}{black}
+\colorlet{body}{black}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% set document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\name{Gerardo Pérez Muñoz}
+\tagline{Mi trabajo representa lo que soy, mas no todo lo que puedo lograr.}
+\photo[]{foto_cv.jpg}{\dimexpr \headerheight-\marginbottom}   % make photo exactly match the header with margintop/marginright/marginbottom as margin
+
+\makeheader
+
+\highlightbar{
+
+    \section{Contacto}
+    
+    \email{gerapm0220@gmail.com}
+    \phone{6481217787}
+    \location{Colegio de Querétaro 14327, Chihuahua}
+    \vspace{0.5em}
+    \github{@gera0220}{https://github.com/gera0220}
+    
+    \section{Habilidades}
+    
+    \skillsection{Programación}
+    \skill{LaTeX}{5}
+    \skill{C}{4}
+    \skill{R}{3}
+    
+    \vspace{0.5em}
+    \skillsection{Sistemas Operativos}
+    \skill{Windows}{5}
+    \skill{Linux}{4}
+    
+    \vspace{0.5em}
+    \skillsection{Software y Herramientas}
+    \skill{Manipulación de datos}{4}
+    (Dplyr, R Base)\\
+    \skill{Visualización}{3}
+    (ggplot2, R Base)\\
+    \skill{Comunicación}{3}
+    (R Markdown)\\
+    \skill{Office}{5}\\
+    \skill{LibreOffice}{4}\\
+    \skill{MiniTab}{4}
+    
+    \vspace{0.5em}
+    \skillsection{Idiomas}
+    \skill{Español}{5}
+    \skill{English}{3}
+    \bigskip
+    
+    \section{Certificados}
+    \simpleskill{R Programming por Johns Hopkins University}
+
+}
+\mainbar{
+    \section{Acerca de mí}
+    Soy una persona con mucha confianza en sí misma y con grandes aspiraciones. Si no tengo la respuesta a algo, la tendré; si no sé hacer algo, lo aprenderé.
+    
+    \section[\faGears]{Historia Laboral}
+    \job{08/2019}
+        {Copy Club, Chihuahua}
+        {Encargado de Mostrador}
+        
+    \section[\faMortarBoard]{Educación}
+    
+    \job{08/2018 -}
+        {Facultad de Ingeniería, UACh}
+        {Superior}
+        {}
+    
+    \job{08/2015-06/2018}
+        {Preparatoria 20-30, Delicias, Chihuahua}
+        {Media Superior}
+        {}
+
+    \section{Habilidades Generales}
+    \smallskip % additional skip because tag outlines use up space
+    \tag{Servicio al cliente}
+    \tag{Adaptable}
+    \tag{Trabajo en equipo}
+    \tag{Persistente}
+    \tag{Comprometido}
+
+    \medskip
+    
+    % ----- PROJECTS -----
+    \section{Proyectos}
+            \github{Regresión Lineal Múltiple en Aspirantes a Ingeniería Biomédica}{https://github.com/gera0220/RLM_IB}
+            
+            \github{Algoritmos de Búsqueda}{https://github.com/gera0220}
+            \divider
+    % ----- PROJECTS -----
+    
+    \section{Wheel Chart}
+    % This is taken from AltaCV
+    % see https://github.com/liantze/AltaCV for details
+    \wheelchart{3cm}{0.5cm}{% outer and inner diameter
+        8/8em/accent!33/Dormir,          % comma-separated list of
+        6/8em/accent!40/Escuela,    % fraction of 24 / line length / color / label
+        2/8em/accent!80/Demás,          % here, the color is shades of the accent color
+        4/8em/accent!60/Programar,
+        4/8em/accent/Leer
+    }
+}
+\makebody
+\clearpage
+
+
+\pagestyle{highlightmain}
+\highlightbar{}
+\end{document}
